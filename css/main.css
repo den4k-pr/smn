@@ -1941,6 +1941,7 @@ background: rgba(0, 0, 0, 0.55);border-bottom: 1px solid #242424;}
     border-radius: 2vw;
     border: 0.15vw solid transparent;
     max-width: 100%;
+    min-height: 8vw;
 }
 
 .faq-header-click {
@@ -1956,7 +1957,7 @@ background: rgba(0, 0, 0, 0.55);border-bottom: 1px solid #242424;}
 }
 
 .faq-title {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     padding-right: 2vw;
 }
 
