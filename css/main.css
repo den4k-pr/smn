@@ -929,7 +929,7 @@
 
 .results {padding:7vw 5vw}
 .results-items {display:flex; flex-direction:column; gap:4vw; padding-top:4vw}
-.results-item {background-repeat:no-repeat; background-size:100% 100%; padding:2vw 2vw 2vw 28vw; height:22vw}
+.results-item {background-repeat:no-repeat; background-size:100% 92%; padding:2vw 2vw 2vw 28vw; height:22vw}
 .results-item p {font-weight:400; font-size:4vw; color:#fdfdfd}
 .results-item:nth-child(1) {background-image:url(../images/frame-1.webp)}
 .results-item:nth-child(2) {background-image:url(../images/frame-2.webp)}
@@ -940,7 +940,7 @@
     .results {padding:5vw 0vw}
 .results-items {gap:2vw; padding-top:3vw; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:center}
 .results-item {padding:1vw 1vw 1vw 11vw; height:9vw; width:48%}
-.results-item p {font-weight:400; font-size:1.7vw; color:#fdfdfd}
+.results-item p {font-weight:400; font-size:1.5vw; line-height: 120%; color:#fdfdfd}
 .results .hero__btn {margin-top:2vw; margin-left:auto}
 }
 
