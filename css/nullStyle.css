@@ -65,15 +65,6 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 450px) {
-  .mainTitle{
-    font-size: 14.54vw;
-  }
-  .mainText{
-    font-size: 3.41vw;
-  }
-}
-
 .wrapper{
     width: 100%;
     overflow: hidden;
