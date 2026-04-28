@@ -328,3 +328,7 @@
 .img-wrapper{width:50%;margin-left:auto;order:2}
 .new-fonTitle{background-image:url(../images/new-fon.webp);background-repeat:no-repeat;background-size:contain;width:100%;height:11vw;display:flex;justify-content:center;align-items:center;background-position:center}
 }
+
+.gallery video{
+    object-fit: cover;
+}
