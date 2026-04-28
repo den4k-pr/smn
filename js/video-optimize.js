@@ -3,6 +3,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const AUTOPLAY_THRESHOLD = 0.5;
     const LAZY_THRESHOLD = 0.01;
 
+
+    // ==============================================================
+// GALLERY GRID — автоплей відео як GIF при скролі
+// ==============================================================
+const galleryObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target;
+
+        // Ледаче завантаження
+        if (!video.src && video.dataset.src) {
+            video.src = video.dataset.src;
+            video.preload = 'metadata';
+            video.load();
+        }
+
+        if (entry.isIntersecting) {
+            const tryPlay = () => video.play().catch(() => {});
+            video.readyState >= 2
+                ? tryPlay()
+                : video.addEventListener('canplay', tryPlay, { once: true });
+        } else {
+            if (!video.paused) video.pause();
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.gallery-img video').forEach(video => {
+    // Гарантуємо правильні атрибути
+    video.muted = true;
+    video.loop = true;
+    video.controls = false;
+    video.removeAttribute('controls');
+    video.setAttribute('playsinline', '');
+
+    // Якщо src вже вставлений в HTML — прибираємо щоб не грузилось одразу
+    if (video.dataset.src && video.src) {
+        video.removeAttribute('src');
+        video.load();
+    }
+
+    galleryObserver.observe(video);
+});
+
     // ==============================================================
     // 1. ЛЕНИВОЕ ЗАВАНТАЖЕННЯ
     // ==============================================================
